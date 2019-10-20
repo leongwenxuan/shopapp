@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View , Text, StyleSheet, Button } from 'react-native';
+import { View , Text, StyleSheet, Button, TouchableWithoutFeedback, Keyboard} from 'react-native';
 
 import Card from '../components/card';
 import Input from '../components/input';
@@ -14,6 +14,9 @@ const StartGameScreen = props => {
     };
 
     return (
+        <TouchableWithoutFeedback onPress={() => {
+            Keyboard.dismiss();
+        }}>
         <View style={styles.screen}>
             <Text style={styles.title}> Start A New Game!</Text>
                 <Card style={styles.inputContainer}>
@@ -25,6 +28,7 @@ const StartGameScreen = props => {
                 </View>
                 </Card>
         </View>
+        </TouchableWithoutFeedback>
     );
 };
 

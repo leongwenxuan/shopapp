@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button, Image, Dimensions, ScrollView, SafeAreaView} from 'react-native';
+import { View, Text, StyleSheet, Button, Image, Dimensions, ScrollView} from 'react-native';
 
 import BodyText from '../components/BodyText';
 import TitleText from '../components/TitleText';
@@ -8,7 +8,6 @@ import MainButton from '../components/MainButton';
 
 const GameOverScreen = props => {
     return (
-        <SafeAreaView>
         <ScrollView>
         <View style ={styles.screen}>
             <BodyText>The Game is Over!</BodyText>
@@ -24,7 +23,6 @@ const GameOverScreen = props => {
             <MainButton onPress={props.onRestart}>NEW GAME</MainButton>
         </View>
         </ScrollView>
-        </SafeAreaView>
     )
 }
 
